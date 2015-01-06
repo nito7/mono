@@ -1,0 +1,395 @@
+# mono.txt
+
+==================================================================================
+## 備忘録
+
+『笑顔』と『人を想う心』
+
+1. 先見性 - 今ここにないものを想像する力
+2. 大局観 - 盤面全体をみて形勢判断する力
+3. 注意力 - Mindfulness, 積極的注意
+4. 情熱   - ワクワクすること
+
+ネタを探す
+
+難しいことを1回するより、簡単なことを100回完璧にする方が難しい
+
+Mindfulness
+Risk
+Goal
+Because
+
+GMM (Goal, Motivation and Mindfulness)
+  Goal:        "何が、いつまでに、どうなってればいいのか？"
+  Motivation:  "何が、誰が、うれしいのか？"
+  Mindfulness: "ペン回し3回"
+
+KMM
+  K: "気持ちわるい"
+  M: "めんどくさい"
+  M: "もったいない"
+
+[参考]シャーロックホームズの思考術
+  - マインドフルネスとモチベーション
+  - 可能性と構成単位(ビルディングブロック)
+  - プレゼンスオブマインド
+  - 確証バイアス
+  - ピンクの像
+
+  1. 自分を知る
+  2. 観察する
+  3. 想像する
+  4. 推理する
+  5. 学習する
+
+迎年惜刻
+  "一年を惜しまず、一刻を惜しむ。"
+
+"手順"から始めよ
+"ゴール"から始めよ
+"楽しみ"から始めよ
+
+Comma   -- 句点を打つ
+Goal    -- 何がどうなっていないといけない？
+So what -- だから何が言いたい？
+Why so  -- なぜそう言える？
+
+プロジェクトマネージメント
+0. 巻き込む。
+1. プロセスに責任を持つ。    -- 自分を使う自分
+2. ロジカルに考える。        -- 記号論理＋なぜ10回
+3. 誰もボールを持たないはNG。
+4. 会議には選択肢を用意する。 -- 選択肢にはインパクト試算
+5. 説明資料を作る。          -- スライド、ExcelはNG。
+6. ホワイトボードを用いる。
+
+リラックスする = 後輩といるときの自分を想像する
+
+・テンションを上げる。
+・縁を大事にする。
+・口角を上げて笑う。
+・深く呼吸する。
+・目線は相手の後ろに置く。
+・優位に立とうとしない。
+・好かれようとしない。
+・負けたら礼を言う。
+・よいところをほめる。
+・欠けているところを許す。
+・友達から始める。
+
+==================================================================================
+## MBA 初期設定
+
+インストールするもの
+・Xcode
+
+.vimrcサンプル
+http://archiva.jp/test/sample_vimrc.txt
+
+・顔文字登録
+http://matsucon.net/material/dic/
+
+◆まおゆう
+
+自分の運命を掴めない存在は、虫です。
+
+私たちを人間にしてください。
+
+メイドを嫌う人は、この世界には存在しません。
+たとえそのメイドが、新人であってもです。
+
+魂持つものの努力の賜物だ。
+
+戦争の基本は物量です。
+飽和攻撃で殿方の理性など崩壊させてしまえば、戦術の必要性すらないのです。
+
+◆中二病でも恋がしたい
+
+自分は人とは違う。自分だけは気づいているから特別だ、とか。
+そういうのに凄い捕われてる、っていうか。
+
+ただ結局、人はいつも何かに病んでるのかなって。
+
+お前には力がある。
+..誰でもない、お前は特別なのだ。
+..しょうがないな。
+
+==================================================================================
+## Hack Day 開発
+
+□ じゃんけんアプリ
+
+r w d l
+--------
+0 2 0 1
+1 0 1 2
+2 1 2 0
+
+□ VocalKit
+http://www.slideshare.net/t26v0748/vocal-kit
+ダウンロード
+https://github.com/KingOfBrian/VocalKit
+
+レオ君のサーバ
+$ ssh -i .ssh/id_rsa www2237uj.sakura.ne.jp
+
+==================================================================================
+## Android SDKインストール
+
+// Javaインストール
+
+http://gano-web.com/mac-android.html
+
+$ javas -version
+
+// Eclipseインストール
+
+http://www.eclipse.org/downloads/
+$ uname -a
+
+$ cd Downloads
+$ tar zxvf eclipse-java-juno-SR1-macosx-cocoa-x86_64.tar
+$ mv eclipse /Applications/
+
+// Preiadesインストール
+
+http://mergedoc.sourceforge.jp
+Pleiades をダウンロード
+
+features, plagins をコピー
+
+Eclise > パッケージの内容を表示 > Contents/MacOS/eclipse.ini に以下の行を追記
++ -javaagent:../../../plugins/jp.sourceforge.mergedoc.pleiades/pleiades.jar
+
+// Android SDKインストール
+
+http://developer.android.com/sdk/index.html
+
+$ mv Downloads/adt-bundle-mac-x86_64 /Applications/
+
+Eclipse > ヘルプ > 新規ソフトウェアのインストール
+名前: Android
+fロケーション: https://dl-ssl.google.com/android/eclipse/
+
+> 再起動
+ターゲット・ロケーション: /Applications/adt-bundle-mac-x86_64
+
+// パスを通す
+
+$ vim .bash_profile
++ export PATH=$PATH:/Applications/adt-bundle-mac-x86_64/platform-tools
+$ (再起動)
+$ adb
+
+==================================================================================
+## Androidアプリ開発
+
+まとめ
+http://arpanet617.blog.fc2.com/blog-entry-28.html
+$ git clone git://github.com/yshiga/android
+
+Xcodeコマンドラインツール
+Xcode->Preference->Downloads
+
+MacPorts インストール
+http://www.macports.org/install.php
+
+.screenrc
+http://d.hatena.ne.jp/s-edy/20090706/1246891026
+
+$ sudo port install git-core +svn +doc
+$ git --version
+
+$ git config --global user.name "nito7"
+$ git config --global user.email "naoki.itoh.7kusa@gmail.com"
+$ git config --global color.ui "auto"
+$ git config --list
+
+$ mkdir git
+$ cd git
+$ git init
+$ git clone git://github.com/yshiga/android
+
+Gitイメージ図
+http://www.slideshare.net/to_ueda/git-6821390
+
+図解Git
+http://www.mew.org/~kazu/proj/visual-git-guide/
+
+[WorkTree] -----add----> [Stage] --commit--> [LocalRepositry] --push--> [RemoteRepositry]
+[WorkTree] ------------commit -a ----------> [LocalRepositry] --push--> [RemoteRepositry]
+[workTree] <--checkout-- [Stage] <--reset--- [LocalRepositry]           [RemoteRepositry]
+[workTree] <-------------------------------- [LocalRepositry] <--pull-- [RemoteRepositry]
+[workTree] <------------merge--------------- [LocalRepositry] <-fetch-- [RemoteRepositry]
+
+----
+
+/* コンテンツアシスト有効化 */
+http://www.noridon.net/weblogs/archives/2007/01/macos_xflex_bui_1.html
+=> システム環境設定 -> キーボード -> Spotligth -> ^スペース 無効化
+
+/* エミュレータの電源状態変更 */
+http://www.adakoda.com/adakoda/2010/07/android-29.html
+
+/* masterにpushできない */
+http://samura1.net/2012/10/github_first/
+http://bang.hateblo.jp/entry/20110529/1306691268
+
+/* コミット*/
+$ git commit -a
+or
+$ git add [filename]
+$ git commit -m "initial commit"
+$ git push -u origin master
+fatal: remote error:
+  You can't push to git://github.com/yshiga/android.git
+  Use git@github.com:yshiga/android.git
+$ vim android/.git/config
+ -  url = git://github.com/yshiga/android
+ +  url = git@github.com:yshiga/android
+$ push -u origin master
+
+/* チェックアウト */
+$ git pull
+or
+$ git fetch
+$ git diff FETCH_HEAD
+$ git merge FETCH_HEAD
+$ git reset --hard
+$ git merge FETCH_HEAD
+$ git status -s
+
+$ git clone git://github.com/yshiga/android
+Cloning into 'android'...
+fatal: remote error: 
+  Repository not found.
+$ rm -rf .git
+$ git clone git://github.com/yshiga/android
+
+$ adb devices
+
+       |  inserted  |  uninserted  |
+-------|------------|--------------|
+0-20%  |  sayHa     |  sayClaim    |
+20-99% |  sayAn     |  sayMotto    |
+100%   |  sayIku    |  sayGoodbye  |
+
+==================================================================================
+## WebSocket入門
+
+http://gihyo.jp/dev/feature/01/websocket
+http://mvnrepository.com/
+http://download.eclipse.org/jetty/stable-7/apidocs/allclasses-noframe.html
+
+==================================================================================
+## Firefox OS アプリ開発入門
+ 
+http://gitfab.org/dadaa/firefoxos-workshop-simple/
+http://gitfab.org/dadaa/firefoxos-workshop-webapi/
+
+https://developer.mozilla.org/ja/docs/Web/Apps/Manifest
+https://developer.mozilla.org/ja/docs/WebAPI
+
+RGB反転処理
+1. Canvasに現在の画像を保存
+2. 画像としてRGBを反転
+3. 再描画
+
+Android Firefox メニュー > ツール > アプリ
+> インストール済みのアプリ管理画面 > Firefox Appli MarketPlace
+
+
+☆ インストールページの作成
+----
+  var Apps = navigator.mozApps;
+  var manifestUrl = "http://..."; // マニフェストフィアルのURL
+  
+  var request = Apps.install(manifestUrl);
+  request.onsuccess = function() {
+    // インストールが成功した場合の処理
+  };
+  request.onerror = function() {
+    // インストールが失敗した場合の処理
+  };
+----
+
+==================================================================================
+## R インストール
+
+http://www.macports.org/install.php
+$ tar zxvf MacPorts-2.2.0.tar.gz
+$ cd MacPorts-2.2.0
+$ ./configure && make && sudo make install
+$ sudo port -v selfupdate
+$ sudo port install R
+$ R
+> install.packages("ggplot2", dependencies=TRUE)
+> library(ggplot2)
+> english.exam = data.frame(
++ Reading = c(54, 23, 82),
++ Writing = c(61, 35, 47))
+> g = ggplot(english.exam, aes(Reading, Writing))
+> g + geom_point()
+
+==================================================================================
+## MacVim
+
+設定ファイル
+$ vim /Applications/MacVim.app/Contents/Resources/vim/gvimrc
+
+==================================================================================
+## NodeJS
+
+$ sudo yum install epel-release
+$ sudo yum install nodejs
+$ node -v
+$ sudo yum install npm
+$ npm -v
+$ sudo npm install -g yo
+
+==================================================================================
+## Screen でフォルダが色分けされない
+
+$ git clone git://git.savannah.gnu.org/screen.git
+$ cd screen/src 
+$ autoconf
+$ autoheader
+$ sudo yum install ncurses-devel
+$ ./configure  --enable-colors256
+$ sudo make & make install
+
+==================================================================================
+## Golang
+
+$ tar zxvf go1.4.linux-amd64.tar.gz
+$ vim .bashrc
++ export GOROOT=$HOME/go
++ export GOPATH=$HOME/_go
++ export GOOS=linux
++ export GOARCH=arm64
++ export PATH=$PATH:$GOROOT/bin
+$ sudo yum install mercurial
+
+
+チュートリアル
+http://golang.jp/go_tutorial
+
+==================================================================================
+## RStudio
+
+$ sudo yum install R
+$ sudo yum install openssl098e
+$ wget http://download2.rstudio.org/rstudio-server-0.98.1091-x86_64.rpm
+$ sudo yum install --nogpgcheck rstudio-server-0.98.1091-x86_64.rpm
+$ rstudio-server verify-installation
+$ rstudio-server start
+$ chkconfig --list messagebus
+
+
+==================================================================================
+
+
+
+
+
+
