@@ -5,9 +5,9 @@
 
 『笑顔』と『人を想う心』
 
-1. 先見性 - 今ここにないものを想像する力
-2. 大局観 - 盤面全体をみて形勢判断する力
-3. 注意力 - Mindfulness, 積極的注意
+1. 大局観 - 全体と部分を見て形勢判断する力
+2. 洞察力 - ぼんやりとしたものを具体化する力
+3. 注意力 - プレゼンスオブマインド
 4. 情熱   - ワクワクすること
 
 ネタを探す
@@ -15,9 +15,8 @@
 難しいことを1回するより、簡単なことを100回完璧にする方が難しい
 
 Mindfulness
-Risk
-Goal
-Because
+Goal (何がどうなっていればいい？)
+Because (というのは？)
 
 GMM (Goal, Motivation and Mindfulness)
   Goal:        "何が、いつまでに、どうなってればいいのか？"
@@ -384,6 +383,9 @@ $ sudo yum install --nogpgcheck rstudio-server-0.98.1091-x86_64.rpm
 $ rstudio-server verify-installation
 $ rstudio-server start
 $ chkconfig --list messagebus
+$ sudo chkconfig messagebus on
+
+
 
 
 ==================================================================================
