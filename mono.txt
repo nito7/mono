@@ -1,6 +1,42 @@
 # mono.txt
 
 ==================================================================================
+## 基本則
+
+//--------------------------------------------------
+// 業務３箇条
+//--------------------------------------------------
+① 手続きから始めよ
+② ゴールを遠ざけよ
+③ 評価を念頭に置け
+
+//--------------------------------------------------
+// プロジェクトマネージメント７箇条
+//--------------------------------------------------
+① 人を巻き込む
+② プロセスに責任を持つ
+③ 先に評価まで念頭に置く
+④ MTGには選択肢を用意する
+⑤ 説明資料をこまめに作る
+⑥ ホワイトボードを占領する
+⑦ 議事録を必ず残す
+
+//--------------------------------------------------
+// コーディング３箇条
+//--------------------------------------------------
+① 名前を決めよ
+② 論理を切り分けよ
+③ フローを考えよ
+
+//--------------------------------------------------
+// レビュー４箇条
+//--------------------------------------------------
+① コードを確認せずに分かる方法を探す
+② やってはいけないことを３つ挙げる
+③ 「論理」と「フロー」は正しいか？
+④ 拡張性・保守性・可読性はどうか？
+
+==================================================================================
 ## 機動戦士ガンダムUC - episode 7 虹の彼方に
 
 // マリーダ・クルス
@@ -39,6 +75,8 @@
 ## 備忘録
 
 『笑顔』と『人を想う心』
+
+『評価』のない仕事はない
 
 1. 大局観 - 全体と部分を見て形勢判断する力
 2. 洞察力 - ぼんやりとしたものを具体化する力
@@ -88,12 +126,14 @@ Why so  -- なぜそう言える？
 
 プロジェクトマネージメント
 0. 巻き込む。
-1. プロセスに責任を持つ。    -- 自分を使う自分
-2. ロジカルに考える。        -- 記号論理＋なぜ10回
+1. プロセスに責任を持つ。     -- 自分を使う自分
+2. 論理的に考える。           -- 記号論理＋なぜ10回
 3. 誰もボールを持たないはNG。
 4. 会議には選択肢を用意する。 -- 選択肢にはインパクト試算
-5. 説明資料を作る。          -- スライド、ExcelはNG。
+5. 説明資料を作る。           -- スライド、ExcelはNG。
 6. ホワイトボードを用いる。
+7. 議事録を残す。             -- 決まったこと、宿題、Next Action
+8. 常に評価を念頭に置く。
 
 リラックスする = 後輩といるときの自分を想像する
 
@@ -427,9 +467,63 @@ $ sudo rstudio-server start
 
 http://qiita.com/ytr_i/items/5892cbaf7b6f26bafb9d
 
+// rbenv
+$ sudo yum install git
+$ sudo yum install gcc-c++ glibc-headers openssl-devel readline libyaml-devel readline-devel zlib zlib-devel
+$ git clone https://github.com/sstephenson/rbenv.git
+$ sudo mv rbenv/ /usr/local/
+$ sudo vi /etc/profile
++ export RBENV_ROOT="/usr/local/rbenv"
++ export PATH="${RBENV_ROOT}/bin:${PATH}"
++ eval "$(rbenv init -)"
+$ source /etc/profile
+$ rbenv -v
 
+// ruby-build
+$ git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
 
+// ruby
+$ rbenv install -l
+$ sudo yum install libffi-devel
+$ rbenv install -v 2.2.0
+$ rbenv rehash
+$ rbenv global 2.2.0
+$ ruby -v
 
+// rails
+$ gem update --system
+$ gem install --no-ri --no-rdoc rails
+$ gem install bundler
+$ rbenv rehash
+$ rails -v
 
+==================================================================================
+## ディレクトリカラー
+
+$ cp /etc/DIR_COLORS ~/.dir_colors
+$ eval `dircolors ~/.dir_colors -b`
+
+==================================================================================
+## Wordpress
+
+http://www.adminweb.jp/wordpress/install/
+
+$ sudo yum install php mysql-server
+$ sudo /etc/rc.d/init.d/httpd restart #=> php ok
+$ sudo vi /etc/my.cnf
++ character-set-server=utf8
+$ sudo /etc/rc.d/init.d/mysqld start #=> mysql ok
+$ mysql -u root
+> set password = password('hoge');
+> create database wps_db;
+> grant all on wps_db.* to 'wps'@'localhost' identified by 'hoge';
+> exit
+
+$ sudo yum install php-mysql
+$ sudo vi /etc/php.ini
++ extension=mysql.so
+$ sudo /etc/rc.d/init.d/httpd restart
+
+==================================================================================
 
 
