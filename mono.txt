@@ -1,6 +1,9 @@
 # mono.txt
 
 ==================================================================================
+## 毎朝みる
+
+==================================================================================
 ## 基本則
 
 //--------------------------------------------------
@@ -11,15 +14,16 @@
 ③ 評価を念頭に置け
 
 //--------------------------------------------------
-// プロジェクトマネージメント７箇条
+// プロジェクトマネージメン
 //--------------------------------------------------
 ① 人を巻き込む
 ② プロセスに責任を持つ
-③ 先に評価まで念頭に置く
+③ 先に評価方法まで考える
 ④ MTGには選択肢を用意する
-⑤ 説明資料をこまめに作る
-⑥ ホワイトボードを占領する
-⑦ 議事録を必ず残す
+⑤ 説明スライドを作る
+⑥ ホワイトボードを使う
+⑦ 議事録を残す
+⑧ ボールは長く持たない
 
 //--------------------------------------------------
 // コーディング３箇条
@@ -335,7 +339,7 @@ $ git status -s
 
 $ git clone git://github.com/yshiga/android
 Cloning into 'android'...
-fatal: remote error: 
+fatal: remote error:
   Repository not found.
 $ rm -rf .git
 $ git clone git://github.com/yshiga/android
@@ -357,7 +361,7 @@ http://download.eclipse.org/jetty/stable-7/apidocs/allclasses-noframe.html
 
 ==================================================================================
 ## Firefox OS アプリ開発入門
- 
+
 http://gitfab.org/dadaa/firefoxos-workshop-simple/
 http://gitfab.org/dadaa/firefoxos-workshop-webapi/
 
@@ -377,7 +381,7 @@ Android Firefox メニュー > ツール > アプリ
 ----
   var Apps = navigator.mozApps;
   var manifestUrl = "http://..."; // マニフェストフィアルのURL
-  
+
   var request = Apps.install(manifestUrl);
   request.onsuccess = function() {
     // インストールが成功した場合の処理
@@ -425,7 +429,7 @@ $ sudo npm install -g yo
 ## Screen でフォルダが色分けされない
 
 $ git clone git://git.savannah.gnu.org/screen.git
-$ cd screen/src 
+$ cd screen/src
 $ autoconf
 $ autoheader
 $ sudo yum install ncurses-devel
@@ -525,5 +529,42 @@ $ sudo vi /etc/php.ini
 $ sudo /etc/rc.d/init.d/httpd restart
 
 ==================================================================================
+## WatchKit
+
+https://developer.apple.com/watchkit/
+http://wonderpla.net/blog/engineer/WatchKit_HelloWorld/
+
+==================================================================================
+## Capistrano
+
+http://qiita.com/ea54595/items/12ab7b3a8213b35cca10
+
+// とりあえず、プロジェクト作成
+
+$ rails new test01
+$ cd test01
+$ bundle install  #=> sqliteのエラー
+$ yum install sqlite-devel
+$ gem install sqlite3-ruby
+$ bundle install
+
+// Capistranoインストール
+$ gem install capistrano
+$ cap install
+
+==================================================================================
+## Watch Apps
+
+http://iphonedev.tv/blog/2014/11/21/watchkit-swift-tutorial-download-xcode-62-beta-and-start-making-apple-watch-apps
 
 
+==================================================================================
+## Shebang
+
+http://qiita.com/tueda/items/369215b99316b2e9f3d8
+
+
+
+
+
+==================================================================================
