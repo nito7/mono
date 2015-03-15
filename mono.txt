@@ -3,6 +3,12 @@
 ==================================================================================
 ## 毎朝みる
 
+誰かの役に立っているか？
+何が起こるか想像してるか？
+
+勉強 ＝ インデックス化
+職人 ＝ 精度とスピード
+
 ==================================================================================
 ## 基本則
 
@@ -565,6 +571,47 @@ http://qiita.com/tueda/items/369215b99316b2e9f3d8
 
 
 
+==================================================================================
+## MacにRailsをインストールする
+
+Homebrewインストール
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew -v
+$ brew update
+$ brew install rbenv ruby-build
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+$ source ~/.bash_profile
+
+$ sudo gem install rails --no-ri --no-rdoc
+
+railsインストール時にiconv.hで起こられた場合
+$ xcode-select --install
+
+railsインストール時でlibxml2で起こられた場合
+$ brew tap homebrew/dupes
+$ brew install libxml2 libxslt libiconv
+$ brew link --force libxml2 libxslt libiconv
+$ bundle config build.nokogiri --use-system-libraries --with-iconv-dir="$(brew --prefix libiconv)"
+  ↓
+ダメだったのでnokogiriを再インストールする
+$ NOKOGIRI_USE_SYSTEM_LIBRARIES=1 sudo gem install nokogiri --no-rdoc --no-ri
+  ↓
+これでもダメなので
+$ sudo gem install nokogiri -- --use-system-libraries --with-iconv-dir="$(brew --prefix libiconv)" --with-xml2-config="$(brew --prefix libxml2)/bin/xml2-config" --with-xslt-config="$(brew --prefix libxslt)/bin/xslt-config"
+  ↓
+$ rails new book #=> ダメだ
+
+バージョン下げたら行けた
+$ sudo gem install rails --version 4.1.0 --no-ri --no-rdoc
+$ sudo gem install nokogiri --version 1.6.0 --no-ri --no-rdoc
+$ vim ~/.bashrc
++ export PATH=/Users/naoki/.rbenv/shims:$PATH
+
+==================================================================================
+
+
+
+==================================================================================
 
 
 ==================================================================================
