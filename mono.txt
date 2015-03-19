@@ -473,7 +473,7 @@ $ sudo rstudio-server start
 > http://www12480uf.sakura.ne.jp:8787
 
 ==================================================================================
-## Ruby on Rails
+## Ruby on Rails 導入
 
 http://qiita.com/ytr_i/items/5892cbaf7b6f26bafb9d
 
@@ -608,8 +608,27 @@ $ vim ~/.bashrc
 + export PATH=/Users/naoki/.rbenv/shims:$PATH
 
 ==================================================================================
+## Railsテンプレート
 
+http://ruby-rails.hatenadiary.com/entry/20141120/1416483136
 
+$ rails g controller Products index
+$ rails g model Product name:string price:integer released_on:date
+$ rake db:migrate
+$ vim db/seeds.rb
+$ rake db:seed
+$ rake db:migrate
+$ vim app/controllers/products_controller.rb
+$ vim app/views/products/index.html.erb
+$ vim config/routes.rb
+$ rails s
+
+CSVアップロード機能追加
+[ ]application.rb: ライブラリ読み込み
+[ ]index.html.erb: 入力フォーム追加
+[ ]route.rb: importアクションを追加
+[ ]products_controller.rb: importアクションでProduct.importを呼出
+[ ]product.rb: DB更新処理を定義
 
 ==================================================================================
 
