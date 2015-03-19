@@ -631,6 +631,44 @@ CSVアップロード機能追加
 [ ]product.rb: DB更新処理を定義
 
 ==================================================================================
+## Deep learning
+
+http://qiita.com/icoxfog417/items/65e800c3a2094457c3a0
+
+ ---- Torch 7 ----
+
+http://torch.ch/docs/getting-started.html#_
+
+$ curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | bash
+$ git clone https://github.com/torch/distro.git ~/torch --recursive
+$ cd ~/torch; ./install.sh
+
+ ---- cenos 6.5 => 7 ----
+
+## 参考
+http://fnya.cocolog-nifty.com/blog/2014/08/centos-65-cento.html
+http://orebibou.com/2014/07/centos-6-5%E3%81%8B%E3%82%897%E3%81%B8%E3%82%A2%E3%83%83%E3%83%97%E3%82%B0%E3%83%AC%E3%83%BC%E3%83%89/
+
+## 手順
+$ cat /etc/redhat-release
+$ yum -y update
+$ reboot
+
+$ yum -y install openscap pcre-devel libxml2-devel libxslt-devel m2crypto python-simplejson mod_wsgi
+
+$ rpm -ivh http://dev.centos.org/centos/6/upg/x86_64/Packages/preupgrade-assistant-1.0.2-36.0.1.el6.centos.x86_64.rpm
+$ rpm -ivh http://dev.centos.org/centos/6/upg/x86_64/Packages/preupgrade-assistant-contents-0.5.14-1.el6.centos.noarch.rpm
+$ rpm -ivh http://dev.centos.org/centos/6/upg/x86_64/Packages/preupgrade-assistant-ui-1.0.2-36.0.1.el6.centos.x86_64.rpm
+$ rpm -ivh http://dev.centos.org/centos/6/upg/x86_64/Packages/redhat-upgrade-tool-0.7.22-3.el6.centos.noarch.rpm
+
+$ rpm --import http://ftp.plusline.de/centos/7.0.1406/os/x86_64/RPM-GPG-KEY-CentOS-7
+
+$ preupg -s CentOS6_7
+
+$ redhat-upgrade-tool-cli --network 7.0 --instrepo http://mirror.centos.org/centos/7/os/x86_64/ --force
+$ reboot
+  ↓
+SSH接続できなくなった
 
 
 ==================================================================================
