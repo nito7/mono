@@ -3,11 +3,13 @@
 ==================================================================================
 ## 毎朝みる
 
-誰かの役に立っているか？
-何が起こるか想像してるか？
+次に起こることを想像する。
+単純にやる方法を考える。
+単一の情報源を信じない。
 
 勉強 ＝ インデックス化
 職人 ＝ 精度とスピード
+プログラマ ＝ ピアニスト
 
 ==================================================================================
 ## 基本則
@@ -631,11 +633,33 @@ CSVアップロード機能追加
 [ ]product.rb: DB更新処理を定義
 
 ==================================================================================
+## systemctl コマンド
+
+$ systemctl list-units --type=service  #=> 稼働中のサービス一覧
+$ systemctl list-unit-files --type=service  #=> 定義中さているサービス一覧
+
+状態確認
+$ systemctl status sshd
+$ systemctl is-enabled sshd
+
+$ systemctl enable httpd.service  #=> OS起動時に起動
+
+http://equj65.net/tech/systemd-manage/
+
+==================================================================================
+## OpenCV
+
+参考
+http://opencv.jp/sample/index.html
+http://qiita.com/bird_nitryn/items/0b927e3682726f192fd1
+http://nantekottai.com/2014/04/16/opencv-xcode5-homebrew/
+
+==================================================================================
 ## Deep learning
 
 http://qiita.com/icoxfog417/items/65e800c3a2094457c3a0
 
- ---- Torch 7 ----
+ ---- Torch 7 Install ----
 
 http://torch.ch/docs/getting-started.html#_
 
@@ -669,6 +693,60 @@ $ redhat-upgrade-tool-cli --network 7.0 --instrepo http://mirror.centos.org/cent
 $ reboot
   ↓
 SSH接続できなくなった
+
+## Torch 7 チュートリアル
+
+http://nonbiri-tereka.hatenablog.com/entry/2015/01/27/181229
+http://code.madbits.com/wiki/doku.php
+http://conditional.github.io/blog/2013/12/07/an-introduction-to-torch7/
+
+https://github.com/facebook/iTorch
+
+http://d.hatena.ne.jp/E_Mattsan/20120209/1328790656
+
+==================================================================================
+## ReactiveX
+
+http://liginc.co.jp/web/js/151272
+https://github.com/Reactive-Extensions/RxJS
+
+==================================================================================
+## Apache設定
+
+http://qiita.com/tamamius/items/448c350ca34e4db9f6f5
+http://centossrv.com/apache.shtml
+
+$ sudo vi /etc/httpd/conf/httpd.conf
+$ sudo systemctl status httpd
+$ sudo systemctl start httpd
+$ ss -nat
+$ sudo iptables --list
+$ sudo systemctl stop firewalld
+
+==================================================================================
+## JavaScript 自習
+
+# React + Webpack + gulp
+http://qiita.com/uryyyyyyy/items/6d7d29499efbca8c618e
+
+
+# JavaScriptモジュール
+http://tsuchikazu.net/javascript-module/
+
+# Rhino
+http://dev.ariel-networks.com/Members/iwanaga/rhino-intro/
+
+==================================================================================
+
+
+
+
+
+
+
+
+
+
 
 
 ==================================================================================
