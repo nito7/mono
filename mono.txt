@@ -8,26 +8,30 @@ $ ls -Z
 -rwxr-xr-x. apache apache unconfined_u:object_r:user_home_t:s0 index.html
 $ restorecon index.html
 
+基本コマンド
+$ /usr/sbin/httpd -l                     #=> モジュール確認
+$ sudo yum -y install httpd-devel        #=> apxsインストール
+$ /bin/apxs -g -n hoge                   #=> -g：テンプレート生成、-n：モジュール名指定
+$ /bin/apxs -c mod_hoge.c                #=> コンパイル
+$ /bin/apxs -i -a -n 'hoge' mod_hoge.la  #=> インストール
+
 ## React
 
 http://facebook.github.io/react/docs/tutorial.html
 http://qiita.com/futoase/items/d536527e0bfe83aea0c5
 https://github.com/facebook/react
 
-
-
 ## 毎朝みる
 
-人に依って態度を変えるな。
-ボールを離す時間を決めろ。
-数ヶ月先の予定を埋めろ。
-面白いことを見つけろ。
+人に依って態度を変えない
+ボールを離す時間を決める。
+数ヶ月先の予定を埋める。
+面白いことを見つける。
 
-次の次に起こることに備えろ。
-一番単純に答えを出せ。
-単一の情報源を信じるな。
-インデックス化しろ。
-
+次の次に起こることに備える。
+一番単純に答えを出す。
+単一の情報源を信じない。
+インデックス化する。
 
 ## ルール
 
@@ -66,7 +70,11 @@ https://github.com/facebook/react
 ④ 拡張性・保守性・可読性はどうか？
 
 
+<<<<<<< HEAD
 ## 機動戦士ガンダムUC - episode 7 虹の彼方に
+=======
+## 機動戦士ガンダムUC - episode 7 虹の彼方に 好きなセリフ
+>>>>>>> 90615986aaeb3a9956818f32e09ddbbebad8091c
 
 // マリーダ・クルス
 
@@ -191,7 +199,11 @@ http://archiva.jp/test/sample_vimrc.txt
 http://matsucon.net/material/dic/
 
 
+<<<<<<< HEAD
 ## まおゆう
+=======
+## まおゆう 好きなセリフ
+>>>>>>> 90615986aaeb3a9956818f32e09ddbbebad8091c
 
 自分の運命を掴めない存在は、虫です。
 
@@ -206,7 +218,11 @@ http://matsucon.net/material/dic/
 飽和攻撃で殿方の理性など崩壊させてしまえば、戦術の必要性すらないのです。
 
 
+<<<<<<< HEAD
 ## 中二病でも恋がしたい
+=======
+## 中二病でも恋がしたい 好きなセリフ
+>>>>>>> 90615986aaeb3a9956818f32e09ddbbebad8091c
 
 自分は人とは違う。自分だけは気づいているから特別だ、とか。
 そういうのに凄い捕われてる、っていうか。
