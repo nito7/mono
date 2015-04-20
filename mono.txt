@@ -1,7 +1,16 @@
 
+## React
 
+JSX
+http://facebook.github.io/jsx/
 
-## Torch 7 チュートリアル
+チュートリアル
+http://qiita.com/futoase/items/d536527e0bfe83aea0c5
+
+http://facebook.github.io/react/docs/tutorial.html
+https://github.com/facebook/react
+
+## Torch 7
 
 http://nonbiri-tereka.hatenablog.com/entry/2015/01/27/181229
 http://code.madbits.com/wiki/doku.php
@@ -26,12 +35,6 @@ $ sudo yum -y install httpd-devel        #=> apxsインストール
 $ /bin/apxs -g -n hoge                   #=> -g：テンプレート生成、-n：モジュール名指定
 $ /bin/apxs -c mod_hoge.c                #=> コンパイル
 $ /bin/apxs -i -a -n 'hoge' mod_hoge.la  #=> インストール
-
-## React
-
-http://facebook.github.io/react/docs/tutorial.html
-http://qiita.com/futoase/items/d536527e0bfe83aea0c5
-https://github.com/facebook/react
 
 ## MBA 初期設定
 
