@@ -1,41 +1,5 @@
 
-## React
-
-JSX
-http://facebook.github.io/jsx/
-
-チュートリアル
-http://qiita.com/futoase/items/d536527e0bfe83aea0c5
-
-http://facebook.github.io/react/docs/tutorial.html
-https://github.com/facebook/react
-
-## Torch 7
-
-http://nonbiri-tereka.hatenablog.com/entry/2015/01/27/181229
-http://code.madbits.com/wiki/doku.php
-http://conditional.github.io/blog/2013/12/07/an-introduction-to-torch7/
-
-https://github.com/facebook/iTorch
-
-http://d.hatena.ne.jp/E_Mattsan/20120209/1328790656
-
-## Apacheモジュール
-
-SELinux
-http://totech.hateblo.jp/entry/2015/04/05/223714
-
-$ ls -Z
--rwxr-xr-x. apache apache unconfined_u:object_r:user_home_t:s0 index.html
-$ restorecon index.html
-
-基本コマンド
-$ /usr/sbin/httpd -l                     #=> モジュール確認
-$ sudo yum -y install httpd-devel        #=> apxsインストール
-$ /bin/apxs -g -n hoge                   #=> -g：テンプレート生成、-n：モジュール名指定
-$ /bin/apxs -c mod_hoge.c                #=> コンパイル
-$ /bin/apxs -i -a -n 'hoge' mod_hoge.la  #=> インストール
-
+================================================================================
 ## MBA 初期設定
 
 インストールするもの
@@ -47,6 +11,7 @@ http://archiva.jp/test/sample_vimrc.txt
 ・顔文字登録
 http://matsucon.net/material/dic/
 
+================================================================================
 ## Hack Day 開発
 
 □ じゃんけんアプリ
@@ -65,7 +30,7 @@ https://github.com/KingOfBrian/VocalKit
 レオ君のサーバ
 $ ssh -i .ssh/id_rsa www2237uj.sakura.ne.jp
 
-
+================================================================================
 ## Android SDKインストール
 
 // Javaインストール
@@ -113,7 +78,7 @@ $ vim .bash_profile
 $ (再起動)
 $ adb
 
-
+================================================================================
 ## Androidアプリ開発
 
 まとめ
@@ -206,14 +171,14 @@ $ adb devices
 20-99% |  sayAn     |  sayMotto    |
 100%   |  sayIku    |  sayGoodbye  |
 
-
+================================================================================
 ## WebSocket入門
 
 http://gihyo.jp/dev/feature/01/websocket
 http://mvnrepository.com/
 http://download.eclipse.org/jetty/stable-7/apidocs/allclasses-noframe.html
 
-
+================================================================================
 ## Firefox OS アプリ開発入門
 
 http://gitfab.org/dadaa/firefoxos-workshop-simple/
@@ -245,7 +210,7 @@ Android Firefox メニュー > ツール > アプリ
   };
 ----
 
-
+================================================================================
 ## R インストール
 
 http://www.macports.org/install.php
@@ -263,13 +228,13 @@ $ R
 > g = ggplot(english.exam, aes(Reading, Writing))
 > g + geom_point()
 
-
+================================================================================
 ## MacVim
 
 設定ファイル
 $ vim /Applications/MacVim.app/Contents/Resources/vim/gvimrc
 
-
+================================================================================
 ## NodeJS
 
 $ sudo yum install epel-release
@@ -279,7 +244,7 @@ $ sudo yum install npm
 $ npm -v
 $ sudo npm install -g yo
 
-
+================================================================================
 ## Screen でフォルダが色分けされない
 
 $ git clone git://git.savannah.gnu.org/screen.git
@@ -290,7 +255,7 @@ $ sudo yum install ncurses-devel
 $ ./configure  --enable-colors256
 $ sudo make & make install
 
-
+================================================================================
 ## Golang
 
 $ tar zxvf go1.4.linux-amd64.tar.gz
@@ -306,7 +271,7 @@ $ sudo yum install mercurial
 チュートリアル
 http://golang.jp/go_tutorial
 
-
+================================================================================
 ## RStudio
 
 $ sudo yum install R
@@ -320,7 +285,7 @@ $ sudo chkconfig messagebus on
 $ sudo rstudio-server start
 > http://www12480uf.sakura.ne.jp:8787
 
-
+================================================================================
 ## Ruby on Rails 導入
 
 http://qiita.com/ytr_i/items/5892cbaf7b6f26bafb9d
@@ -355,13 +320,13 @@ $ gem install bundler
 $ rbenv rehash
 $ rails -v
 
-
+================================================================================
 ## ディレクトリカラー
 
 $ cp /etc/DIR_COLORS ~/.dir_colors
 $ eval `dircolors ~/.dir_colors -b`
 
-
+================================================================================
 ## Wordpress
 
 http://www.adminweb.jp/wordpress/install/
@@ -382,13 +347,13 @@ $ sudo vi /etc/php.ini
 + extension=mysql.so
 $ sudo /etc/rc.d/init.d/httpd restart
 
-
+================================================================================
 ## WatchKit
 
 https://developer.apple.com/watchkit/
 http://wonderpla.net/blog/engineer/WatchKit_HelloWorld/
 
-
+================================================================================
 ## Capistrano
 
 http://qiita.com/ea54595/items/12ab7b3a8213b35cca10
@@ -406,17 +371,17 @@ $ bundle install
 $ gem install capistrano
 $ cap install
 
-
+================================================================================
 ## Watch Apps
 
 http://iphonedev.tv/blog/2014/11/21/watchkit-swift-tutorial-download-xcode-62-beta-and-start-making-apple-watch-apps
 
-
+================================================================================
 ## Shebang
 
 http://qiita.com/tueda/items/369215b99316b2e9f3d8
 
-
+================================================================================
 ## MacにRailsをインストールする
 
 Homebrewインストール
@@ -452,7 +417,7 @@ $ sudo gem install nokogiri --version 1.6.0 --no-ri --no-rdoc
 $ vim ~/.bashrc
 + export PATH=/Users/naoki/.rbenv/shims:$PATH
 
-
+================================================================================
 ## Railsテンプレート
 
 http://ruby-rails.hatenadiary.com/entry/20141120/1416483136
@@ -475,7 +440,7 @@ CSVアップロード機能追加
 [ ]products_controller.rb: importアクションでProduct.importを呼出
 [ ]product.rb: DB更新処理を定義
 
-
+================================================================================
 ## systemctl コマンド
 
 $ systemctl list-units --type=service  #=> 稼働中のサービス一覧
@@ -489,7 +454,7 @@ $ systemctl enable httpd.service  #=> OS起動時に起動
 
 http://equj65.net/tech/systemd-manage/
 
-
+================================================================================
 ## OpenCV
 
 参考
@@ -497,7 +462,7 @@ http://opencv.jp/sample/index.html
 http://qiita.com/bird_nitryn/items/0b927e3682726f192fd1
 http://nantekottai.com/2014/04/16/opencv-xcode5-homebrew/
 
-
+================================================================================
 ## Deep learning
 
 http://qiita.com/icoxfog417/items/65e800c3a2094457c3a0
@@ -537,12 +502,13 @@ $ reboot
   ↓
 SSH接続できなくなった
 
+================================================================================
 ## ReactiveX
 
 http://liginc.co.jp/web/js/151272
 https://github.com/Reactive-Extensions/RxJS
 
-
+================================================================================
 ## Apache設定
 
 http://qiita.com/tamamius/items/448c350ca34e4db9f6f5
@@ -555,7 +521,7 @@ $ ss -nat
 $ sudo iptables --list
 $ sudo systemctl stop firewalld
 
-
+================================================================================
 ## JavaScript 自習
 
 # React + Webpack + gulp
@@ -568,20 +534,20 @@ http://tsuchikazu.net/javascript-module/
 # Rhino
 http://dev.ariel-networks.com/Members/iwanaga/rhino-intro/
 
-
+================================================================================
 ## NodeJS
 
 Node.js / express / ejs / mongodb
 http://azwoo.hatenablog.com/entry/2014/04/21/210039
 
-
+================================================================================
 ## CentOS7 x MySQL
 
 $ yum -y install http://dev.mysql.com/get/mysql-community-release-el6-5.noarch.rpm
 $ yum -y install mysql-community-server
 $ sudo systemctl start mysqld.service
 
-
+================================================================================
 ## Bookshelf (Model) & bluebird (Promise)
 
 http://tajimajunpei-blog.blogspot.jp/2013/12/nodejsorm-bookshelf.html
@@ -603,6 +569,7 @@ function search (sport_id, prefecture_id) {
   Model.fetchAll() == Collection.forge().fetch()
 ----
 
+================================================================================
 ## 毎朝みる
 
 人に依って態度を変えない
@@ -615,6 +582,7 @@ function search (sport_id, prefecture_id) {
 単一の情報源を信じない。
 インデックス化する。
 
+================================================================================
 ## ルール
 
 //--------------------------------------------------
@@ -651,7 +619,7 @@ function search (sport_id, prefecture_id) {
 ③ 「論理」と「フロー」は正しいか？
 ④ 拡張性・保守性・可読性はどうか？
 
-
+================================================================================
 ## 機動戦士ガンダムUC - episode 7 虹の彼方に 好きなセリフ
 
 // マリーダ・クルス
@@ -686,7 +654,7 @@ function search (sport_id, prefecture_id) {
 。。それでも、その先にあるものを、
 一人の人間として、人を、人のもつ可能性を俺は信じたい。
 
-
+================================================================================
 ## 備忘録
 
 『笑顔』と『人を想う心』
@@ -763,3 +731,68 @@ Why so  -- なぜそう言える？
 ・よいところをほめる。
 ・欠けているところを許す。
 ・友達から始める。
+
+================================================================================
+## RStudio(2)
+
+http://www.rstudio.com/products/rstudio/download-server/
+
+$ sudo yum install -y R
+$ sudo yum install openssl098e
+$ wget http://download2.rstudio.org/rstudio-server-0.98.1103-x86_64.rpm
+$ sudo yum install --nogpgcheck rstudio-server-0.98.1103-x86_64.rpm
+
+
+================================================================================
+## React
+
+JSX
+http://facebook.github.io/jsx/
+
+チュートリアル
+http://qiita.com/futoase/items/d536527e0bfe83aea0c5
+
+http://facebook.github.io/react/docs/tutorial.html
+https://github.com/facebook/react
+
+================================================================================
+## Torch 7
+
+http://nonbiri-tereka.hatenablog.com/entry/2015/01/27/181229
+http://code.madbits.com/wiki/doku.php
+http://conditional.github.io/blog/2013/12/07/an-introduction-to-torch7/
+
+https://github.com/facebook/iTorch
+
+http://d.hatena.ne.jp/E_Mattsan/20120209/1328790656
+
+================================================================================
+## Apacheモジュール
+
+SELinux
+http://totech.hateblo.jp/entry/2015/04/05/223714
+
+$ ls -Z
+-rwxr-xr-x. apache apache unconfined_u:object_r:user_home_t:s0 index.html
+$ restorecon index.html
+
+基本コマンド
+$ /usr/sbin/httpd -l                     #=> モジュール確認
+$ sudo yum -y install httpd-devel        #=> apxsインストール
+$ /bin/apxs -g -n hoge                   #=> -g：テンプレート生成、-n：モジュール名指定
+$ /bin/apxs -c mod_hoge.c                #=> コンパイル
+$ /bin/apxs -i -a -n 'hoge' mod_hoge.la  #=> インストール
+
+
+================================================================================
+
+
+
+
+
+
+
+
+
+
+

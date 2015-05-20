@@ -1,0 +1,80 @@
+## JSX
+
+# メリット
+
+- 構文がXML
+- 構造の可視化
+- 抽象化
+- ...
+
+# コンポーネント
+
+var Divider = React.createClass(
+  render: function() {
+    var text = "テスト";
+    return (
+      <div className="divider">
+        <h2>{text}</h2><hr />
+      </div>
+    )
+  }
+);
+
+動的な値
+
+var Divider = React.createClass(
+  render: function() {
+    var text = "テスト";
+    return (
+      <div className="divider">
+        <h2>{text}</h2><hr />
+      </div>
+    )
+  }
+);
+
+子ノード
+
+var Divider = React.createClass(
+  render: function() {
+    return (
+      <div className="divider">
+        <h2>{this.props.children}</h2><hr />
+      </div>
+    )
+  }
+);
+
+<Divider>テスト</Divider>
+
+# HTMLとの違い
+
+属性
+  - {}で指定
+
+条件分岐
+  - 三項演算子
+  - 変数
+  - 関数呼び出し
+  - 論理演算子[&&]
+
+DOMでない属性
+  - key: DOMの再描画を省略する
+  - rer: render外側の関連を保持する
+  - dengerouslySetInnerHTML: 文字列で内容を指定する
+
+イベント
+
+コメント
+
+特別な属性
+  - htmlFor(for)
+  - className(class)
+
+スタイル
+
+var style = {
+  boderColor: "#999",
+  borderThickness: "1px"
+};
+React.render(<div style={styles}></div>, node);
